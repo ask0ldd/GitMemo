@@ -6,6 +6,8 @@ function App() {
 
   return (
     <div style={{width:'800px'}}>
+      <p>useful link : https://git-school.github.io/visualizing-git/</p>
+      <br/>
       <h2>Git Branch</h2>
       <CommandLine>git branch newImage</CommandLine>
       <p>Create a newImage branch at the HEAD position.</p>
@@ -32,6 +34,7 @@ function App() {
       <br/>
       <GitTree>C1 - - - C2 [main*]{"=>"}C1 - - - C2 [main] - - - C3 [newImage*]</GitTree>
       <br/>
+      <h2>Git Merge</h2>
       <CommandLine>git merge bugFix</CommandLine>
       <p>The HEAD is attached to MAIN.</p>
       <p>MAIN moves to a new commit.</p>
@@ -44,6 +47,20 @@ function App() {
       <p>The HEAD moves & attaches itself to bugFix.</p>
       <p>bugFix is an ancestor of C4 so when merging, bugFix moves to C4.</p>
       <p>bugFix now contains C1, C2, C3 & C4.</p>
+      <br/>
+      <GitTree>aaa{"=>"}bbb</GitTree>
+      <br/>
+      <h2>Git Rebase</h2>
+      <CommandLine>git rebase main</CommandLine>
+      <p>The HEAD is attached to bugFix.</p>
+      <p>A copy of the bugFix current commit is placed under the current MAIN commit.</p>
+      <br/>
+      <GitTree>aaa{"=>"}bbb</GitTree>
+      <br/>
+      <CommandLine>git rebase bugFix</CommandLine>
+      <p>The HEAD is attached to MAIN.</p>
+      <p>MAIN moves to include C3'.</p>
+      <p>Equivalent to git merge bugFix.</p>
       <br/>
       <GitTree>aaa{"=>"}bbb</GitTree>
       <br/>
