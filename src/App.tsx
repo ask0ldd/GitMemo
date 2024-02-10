@@ -22,6 +22,31 @@ function App() {
       <br/>
       <GitTree>C1 - - - C2 [main*]{"=>"}C1 - - - C2 [newImage] - - - C3 [main*]</GitTree>
       <br/>
+      <CommandLine>git branch newImage</CommandLine>
+      <CommandLine>git checkout newImage</CommandLine>
+      <CommandLine>git commit</CommandLine>
+      <p>The HEAD is attached to MAIN.</p>
+      <p>Create a newImage branch at the HEAD position.</p>
+      <p>The HEAD is attached to newImage.</p>
+      <p>Add a commit : newImage follows the commit since the HEAD is on it.</p>
+      <br/>
+      <GitTree>C1 - - - C2 [main*]{"=>"}C1 - - - C2 [main] - - - C3 [newImage*]</GitTree>
+      <br/>
+      <CommandLine>git merge bugFix</CommandLine>
+      <p>The HEAD is attached to MAIN.</p>
+      <p>MAIN moves to a new commit.</p>
+      <p>This new commit contains C2 & C3.</p>
+      <br/>
+      <GitTree>aaa{"=>"}bbb</GitTree>
+      <br/>
+      <CommandLine>git checkout bugFix</CommandLine>
+      <CommandLine>git merge main</CommandLine>
+      <p>The HEAD moves & attaches itself to bugFix.</p>
+      <p>bugFix is an ancestor of C4 so when merging, bugFix moves to C4.</p>
+      <p>bugFix now contains C1, C2, C3 & C4.</p>
+      <br/>
+      <GitTree>aaa{"=>"}bbb</GitTree>
+      <br/>
     </div>
   )
 }
