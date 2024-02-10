@@ -1,5 +1,6 @@
 import './App.css'
 import CommandLine from './components/CommandLine'
+import GitTree from './components/GitTree'
 
 function App() {
 
@@ -10,14 +11,17 @@ function App() {
       <p>Create a newImage branch at the HEAD position.</p>
       <p>The HEAD doesn't get attached to the new branch.</p>
       <br/>
-      <p style={{display:'flex', justifyContent:'center', width:'100%'}}>C1 - - - C2 [main*] ={'>'} C1 - - - C2 [main* newImage] </p>
+      {/*<p style={{display:'flex', justifyContent:'center', width:'100%'}}>C1 - - - C2 [main*] ={'>'} C1 - - - C2 [main* newImage] </p>*/}
+      <GitTree>C1 - - - C2 [main*]{"=>"}C1 - - - C2 [main* newImage]</GitTree>
       <br/>
       <CommandLine>git branch newImage</CommandLine>
       <CommandLine>git commit</CommandLine>
       <p>The HEAD is attached to MAIN.</p>
       <p>Create a newImage branch at the HEAD position.</p>
+      <p>Add a commit : newImage doesn't move with the commit but MAIN & HEAD does.</p>
       <br/>
-      <p style={{display:'flex', justifyContent:'center', width:'100%'}}>C1 - - - C2 [main*] ={'>'} C1 - - - C2 [newImage] - - - C3 [main*] </p>
+      <GitTree>C1 - - - C2 [main*]{"=>"}C1 - - - C2 [newImage] - - - C3 [main*]</GitTree>
+      <br/>
     </div>
   )
 }
