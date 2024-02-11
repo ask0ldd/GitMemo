@@ -44,7 +44,7 @@ function App() {
       <p>Delete a branch.</p>
       <p>The commit can still be accessed / recovered even if they are not included in a branch anymore.</p>
       <br/>
-      <GitTree>C1 - - - C2 [main*]{"=>"}C1 - - - C2 [main] - - - C3 [newImage*]</GitTree>
+      <GitTree>aaa{"=>"}bbb</GitTree>
       <br/>
       <hr/>
       <br/>
@@ -65,7 +65,7 @@ function App() {
           <p>bugFix is an ancestor of C4 so when merging, bugFix moves to C4.</p>
           <p>bugFix now contains C1, C2, C3 & C4.</p>
           <br/>
-          <GitTree>aaa{"=>"}bbb</GitTree>
+          <img style={{border:'2px solid #848AE8'}} src="merge2.png"/>
       </div>
       <br/>
       <hr/>
@@ -76,7 +76,7 @@ function App() {
           <p>The HEAD is attached to bugFix.</p>
           <p>A copy of the bugFix current commit is placed under the current MAIN commit.</p>
           <br/>
-          <GitTree>aaa{"=>"}bbb</GitTree>
+          <img style={{border:'2px solid #848AE8'}} src="rebase.png"/>
       </div>
       <br/>
       <div style={{padding:'1rem 0'}}>
@@ -85,7 +85,7 @@ function App() {
           <p>MAIN moves to include C3'.</p>
           <p>Equivalent to git merge bugFix.</p>
           <br/>
-          <GitTree>aaa{"=>"}bbb</GitTree>
+          <img style={{border:'2px solid #848AE8'}} src="rebase2.png"/>
       </div>
       <br/>
       <hr/>
@@ -123,7 +123,7 @@ function App() {
           <p>Soft delete the commit where the HEAD was.</p>
           <p>A new anonymous branch will be created to put the next new commit.</p>
           <br/>
-          <GitTree>aaa{"=>"}bbb</GitTree>
+          <img style={{border:'2px solid #848AE8'}} src="reset.png"/>
       </div>
       <br/>
       <hr/>
