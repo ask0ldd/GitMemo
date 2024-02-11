@@ -63,8 +63,24 @@ function App() {
       <p>Equivalent to git merge bugFix.</p>
       <br/>
       <GitTree>aaa{"=>"}bbb</GitTree>
+      <h2>Moving the HEAD</h2>
+      <CommandLine>git checkout C1</CommandLine>
+      <p>Move the HEAD to C1.</p>
       <br/>
-      test
+      <GitTree>aaa{"=>"}bbb</GitTree>
+      <br/>
+      <CommandLine>git checkout main~2</CommandLine>
+      <p>Move the HEAD two commits behind MAIN.</p>
+      <br/>
+      <GitTree>aaa{"=>"}bbb</GitTree>
+      <br/>
+      <CommandLine>git branch -f main HEAD~2</CommandLine>
+      <p>the HEAD is on bugFix.</p>
+      <p>MAIN & bugFix are on C3.</p>
+      <p>Move MAIN to C1.</p>
+      <br/>
+      <GitTree>aaa{"=>"}bbb</GitTree>
+      <br/>
     </div>
   )
 }
