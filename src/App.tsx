@@ -136,6 +136,18 @@ function App() {
           <GitTree>aaa{"=>"}bbb</GitTree>
       </div>
       <br/>
+      <hr/>
+      <br/>
+      <h2>Git Cherry-Pick</h2>
+      <div style={{backgroundColor:'#c7ddf0', padding:'1rem 0'}}>
+          <CommandLine>git cherry-pick C2 C4</CommandLine>
+          <p>The HEAD is on MAIN.</p>
+          <p>Makes a copy of C2 & C4 and put them right after the HEAD.</p>
+          <p>the HEAD & MAIN are moved to the copy of C4.</p>
+          <br/>
+          <GitTree>aaa{"=>"}bbb</GitTree>
+      </div>
+      <br/>
     </div>
   )
 }
