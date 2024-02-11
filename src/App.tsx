@@ -88,6 +88,14 @@ function App() {
           <img style={{border:'2px solid #848AE8'}} src="rebase2.png"/>
       </div>
       <br/>
+      <div style={{backgroundColor:'#c7ddf0', padding:'1rem 0'}}>
+          <CommandLine>git rebase -i HEAD~3</CommandLine>
+          <p>The HEAD is attached to MAIN on C3.</p>
+          <p>Via the UI : omit C1 and reordering of C2 & C3 from C0 (HEAD~3).</p>
+          <br/>
+          <img style={{border:'2px solid #848AE8'}} src="rebasei.png"/>
+      </div>
+      <br/>
       <hr/>
       <br/>
       <h2>Moving the HEAD</h2>
@@ -133,7 +141,7 @@ function App() {
           <CommandLine>git revert HEAD</CommandLine>
           <p>Create a new commit cloning the commit right before the head.</p>
           <br/>
-          <GitTree>aaa{"=>"}bbb</GitTree>
+          <img style={{border:'2px solid #848AE8'}} src="revert.png"/>
       </div>
       <br/>
       <hr/>
