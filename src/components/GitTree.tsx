@@ -17,7 +17,7 @@ export default function GitTree(props : React.PropsWithChildren) {
 
 const style = {
     height:'6rem',
-    backgroundColor: '#111133',
+    backgroundColor: '#111133DD',
     color: '#EEEEEE',
     display: 'flex',
     alignItems: 'center',
