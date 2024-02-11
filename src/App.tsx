@@ -15,7 +15,7 @@ function App() {
           <p>The HEAD doesn't get attached to the new branch.</p>
           <br/>
           {/*<p style={{display:'flex', justifyContent:'center', width:'100%'}}>C1 - - - C2 [main*] ={'>'} C1 - - - C2 [main* newImage] </p>*/}
-          <GitTree>C1 - - - C2 [main*]{"=>"}C1 - - - C2 [main* newImage]</GitTree>
+          <img style={{border:'2px solid #848AE8'}} src="branch.png"/>
       </div>
       <br/>
       <div style={{padding:'1rem 0'}}>
@@ -25,7 +25,7 @@ function App() {
           <p>Create a newImage branch at the HEAD position.</p>
           <p>Add a commit : newImage doesn't move with the commit but MAIN & HEAD does.</p>
           <br/>
-          <GitTree>C1 - - - C2 [main*]{"=>"}C1 - - - C2 [newImage] - - - C3 [main*]</GitTree>
+          <img style={{border:'2px solid #848AE8'}} src="branchcommit.png"/>
       </div>
       <br/>
       <div style={{backgroundColor:'#c7ddf0', padding:'1rem 0'}}>
@@ -37,7 +37,7 @@ function App() {
           <p>The HEAD is attached to newImage.</p>
           <p>Add a commit : newImage follows the commit since the HEAD is on it.</p>
           <br/>
-          <GitTree>C1 - - - C2 [main*]{"=>"}C1 - - - C2 [main] - - - C3 [newImage*]</GitTree>
+          <img style={{border:'2px solid #848AE8'}} src="branchcheckoutcommit.png"/>
       </div>
       <br/>
       <CommandLine>git branch -d newImage</CommandLine>
@@ -52,10 +52,10 @@ function App() {
       <div style={{backgroundColor:'#c7ddf0', padding:'1rem 0'}}>
           <CommandLine>git merge bugFix</CommandLine>
           <p>The HEAD is attached to MAIN.</p>
-          <p>MAIN moves to a new commit.</p>
-          <p>This new commit contains C2 & C3.</p>
+          <p>A new commit C4 appears below MAIN & MAIN moves to it.</p>
+          <p>This new commit contains both C2 & C3.</p>
           <br/>
-          <GitTree>aaa{"=>"}bbb</GitTree>
+          <img style={{border:'2px solid #848AE8'}} src="merge.png"/>
       </div>
       <br/>
       <div style={{padding:'1rem 0'}}>
